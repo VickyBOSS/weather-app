@@ -8,12 +8,9 @@ const forecast = (latitude, longitude, callback) => {
       url: weatherAppUrl,
       json: true,
     },
-    (error, response) => {
-      const locationName = response.body.location.name;
-      const locationRegion = response.body.location.region;
-      const locationCountry = response.body.location.country;
-      const location = `${locationName}, ${locationRegion}, ${locationCountry}`;
-      const temperature = response.body.current.temp_c;
+    (error, response = {}) => {
+      const location = `Some Address`;
+      const temperature = Math.random();
       callback(error, {
         location,
         temperature,

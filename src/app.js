@@ -8,6 +8,7 @@ const forecast = require("./utils/forecast.js");
 const app = express();
 
 const developer = "VickyBOSS";
+const port = process.env.PORT || 3000;
 
 // define paths for express app
 const publicDirPath = path.join(__dirname, "../public");
@@ -121,6 +122,6 @@ app.get("*", (req, res) => {
 //   ]);
 // });
 
-app.listen(3000, () => {
-  console.log("App is up on port 3000");
+app.listen(port, () => {
+  console.log("App is up on port " + port);
 });
