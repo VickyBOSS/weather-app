@@ -27,5 +27,3 @@ weatherForm.addEventListener("submit", event => {
       console.log(e.message);
     });
 });
-
-// document.getElementById("weatherElement").innerHTML
